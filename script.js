@@ -32,6 +32,16 @@ PAGE
 ========================= */
 function nextPage(){
 
+// ❗ CEK DI PAGE 1
+if(page === 1){
+    let inputNama = document.getElementById("nama").value.trim()
+
+    if(inputNama === ""){
+        alert("Isi nama dulu ya 😆")
+        return // ⛔ STOP
+    }
+}
+
 let current = document.getElementById("page"+page)
 if(current) current.classList.remove("active")
 
@@ -40,16 +50,26 @@ page++
 let next = document.getElementById("page"+page)
 if(next) next.classList.add("active")
 
+
 if(page === 2){
 
 namaUser = document.getElementById("nama").value
 
-let text = "تَقَبَّلَ اللَّهُ مِنَّا وَمِنكُمْ، صِيَامَنَا وَقِيَامَنَا، وَجَعَلَنَا مِنَ العَائِدِينَ وَالفَائِزِينَ"
-let words = text.split(" ")
+let textArab = "تَقَبَّلَ اللَّهُ مِنَّا وَمِنكُمْ، صِيَامَنَا وَقِيَامَنَا، وَجَعَلَنَا مِنَ العَائِدِينَ وَالفَائِزِينَ"
+
+let arti = "'Semoga Allah menerima (amal ibadah) dari kami dan dari kalian, (menerima) puasa kami dan salat malam kami, serta menjadikan kita termasuk orang-orang yang kembali (kepada fitrah) dan orang-orang yang menang.'"
+
+let words = textArab.split(" ")
 let container = document.getElementById("ucapan")
 
 container.innerHTML = ""
 
+// ✅ CENTER + ARAB MODE
+container.style.textAlign = "center"
+container.style.direction = "rtl"
+container.style.fontFamily = "Amiri"
+
+// 🌙 ARAB (ANIMASI)
 words.forEach((word, index) => {
 let span = document.createElement("span")
 span.innerText = word + " "
@@ -58,14 +78,25 @@ span.style.animationDelay = (index * 0.3) + "s"
 container.appendChild(span)
 })
 
-let nama = document.createElement("span")
+// 📖 ARTI
+let artiEl = document.createElement("p")
+artiEl.innerText = arti
+artiEl.style.marginTop = "15px"
+artiEl.style.fontSize = "14px"
+artiEl.style.opacity = "0.8"
+artiEl.style.direction = "ltr" // biar normal
+
+container.appendChild(artiEl)
+
+// 👤 NAMA
+let nama = document.createElement("p")
 nama.innerText = namaUser
-nama.classList.add("kata","nama")
-nama.style.animationDelay = (words.length * 0.3) + "s"
+nama.style.marginTop = "10px"
+nama.style.fontWeight = "bold"
 
 container.appendChild(nama)
-}
 
+}
 if(page === 3){
 loadMenu()
 }
