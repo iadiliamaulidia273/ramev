@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Ramadhan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="lampion-container">
+    <div class="lampion"></div>
+    <div class="lampion"></div>
+    <div class="lampion"></div>
+</div>
+
+<div class="bg"></div>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+
+<div class="card">
+    
+    <h1 class="title">🌙 Eid Mubarak</h1>
+   
+
+    <div class="ornament">✨ 🌙 ⭐</div>
+
+    <input type="text" id="nama" placeholder="Masukkan nama kamu">
+
+    <button onclick="nextPage()">Masuk</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+<h2 id="ucapan"></h2>
+<button onclick="nextPage()">Lanjut</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+<h2 id="judulMenu">🍪 Pilih Makanan</h2>
+<div class="menu" id="menuList"></div>
+<button onclick="nextMenu()">Lanjut</button>
+</div>
+
+<!-- PAGE 4 SAJIAN -->
+<div class="page" id="page4">
+
+<h2>🍽️ Sajian Untuk Kamu</h2>
+
+<div class="sajianArea">
+  <div class="tangan"></div>
+
+  <div id="makananTampil" class="makanan"></div>
+  <div id="minumanTampil" class="minuman"></div>
+</div>
+
+<button onclick="mulaiMakan()">Mulai Makan 😋</button>
+<button onclick="nextPage()">Lanjut</button>
+
+</div>
+
+
+<!-- PAGE 4 THR -->
+<div class="page" id="page4">
+
+<h2>💰 Pilih THR Kamu</h2>
+
+<div class="menu">
+  <div class="cardItem" onclick="pilihTHR(300000, this)">Rp 300K</div>
+  <div class="cardItem" onclick="pilihTHR(500000, this)">Rp 500K</div>
+  <div class="cardItem" onclick="pilihTHR(700000, this)">Rp 700K</div>
+  <div class="cardItem" onclick="pilihTHR(1000000, this)">Rp 1JT</div>
+</div>
+
+<h3 id="thrNominal">Belum dipilih</h3>
+
+<p class="rules">
+⚠️ THR tidak bisa dicairkan, Gunakan untuk membeli frame aesthetic untuk twibbon kamu di bawah
+</p>
+
+<button onclick="nextPage()">Lanjut</button>
+
+</div>
+
+
+<!-- PAGE 5 GAME -->
+<div class="page" id="page5">
+
+<h2>🎮 Pilih Game</h2>
+
+<p>Poin: <span id="poin">0</span></p>
+
+<div class="menu">
+<button onclick="mulaiKetupat()">🎁 Tangkap Ketupat</button>
+<button onclick="mulaiBedug()">🥁 Tabuh Bedug</button>
+</div>
+
+<!-- AREA GAME -->
+<div id="gameArea"></div>
+
+<button onclick="nextPage()">Lanjut</button>
+
+</div>
+
+<!-- PAGE 6 SHOP -->
+<div class="page" id="page6">
+
+
+<h3>🖼️ Frame Card</h3>
+
+<div class="menu">
+<div class="cardItem" onclick="previewFrame(this,'frame1.png',200000)">🌙 Frame Gold - 200K</div>
+<div class="cardItem" onclick="previewFrame(this,'frame2.png',300000)">🕌 Frame Masjid - 300K</div>
+<div class="cardItem" onclick="previewFrame(this,'frame3.png',400000)">✨ Frame Bintang - 400K</div>
+</div>
+
+<button onclick="beliFrame()">Beli Frame</button>
+
+<p id="notifShop"></p>
+
+<button onclick="nextPage()">Lanjut</button>
+
+</div>
+
+
+
+<!-- PAGE 8 CARD -->
+<div class="page" id="page7">
+<h2>🖼️ Card</h2>
+
+<input type="file" id="upload">
+<canvas id="canvas" width="300" height="300"></canvas>
+
+<button onclick="downloadCard()">Download</button>
+<button onclick="nextPage()">Lanjut</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page" id="page8">
+<h2>💖 Terima kasih</h2>
+<p>Minal aidzin wal faidzin 🙏</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
