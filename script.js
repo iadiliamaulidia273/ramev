@@ -400,23 +400,21 @@ ctx.drawImage(frame,0,0,300,300)
 /* =========================
 DOWNLOAD
 ========================= */
-function downloadCard(){
-let canvas = document.getElementById("canvas")
-let link=document.createElement("a")
-link.download="card.png"
-link.href=canvas.toDataURL()
-link.click()
+function downloadCard() {
+    let canvas = document.getElementById("canvas");
+    let link = document.createElement("a");
+    link.download = "card.png";
+    link.href = canvas.toDataURL();
+    link.click();
 }
 
-window.onload = function(){
+window.onload = function () {
+    let upload = document.getElementById("upload");
 
-let upload = document.getElementById("upload")
-
-if(upload){
-upload.onchange = function(e){
-uploadedImage = URL.createObjectURL(e.target.files[0])
-renderCanvas(uploadedImage)
-}
-}
-
+    if (upload) {
+        upload.onchange = function (e) {
+            let uploadedImage = URL.createObjectURL(e.target.files[0]);
+            renderCanvas(uploadedImage);
+        };
+    }
 }

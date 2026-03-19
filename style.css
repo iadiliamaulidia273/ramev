@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* FONT */
 body{
 font-family: 'Poppins', sans-serif;
@@ -389,4 +390,397 @@ animation: naikMulut 0.8s forwards;
 .tangan{
 font-size:80px;
 content:"✋";
+=======
+/* FONT */
+body{
+font-family: 'Poppins', sans-serif;
+}
+
+/* CARD */
+.card{
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(10px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,215,0,0.3);
+display:flex;
+flex-direction:column;
+gap:15px;
+width:300px;
+}
+
+/* TITLE */
+.title{
+font-family: 'Amiri', serif;
+font-size:40px;
+color:white;
+text-shadow:0 0 10px gold;
+}
+
+/* SUBTITLE */
+.subtitle{
+font-size:14px;
+opacity:0.8;
+}
+
+/* ORNAMENT */
+.ornament{
+font-size:20px;
+animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle{
+0%{opacity:0.5;}
+100%{opacity:1;}
+}
+
+/* INPUT */
+input{
+padding:12px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:14px;
+}
+
+/* BUTTON */
+button{
+padding:12px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg, gold, orange);
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px gold;
+}
+
+/* BG */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background: radial-gradient(circle, #1f4037, #0f2027);
+z-index:-1;
+animation: zoom 10s infinite alternate;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
+}
+
+/* PAGE */
+.page{
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+gap:20px;
+}
+
+.page.active{
+display:flex;
+}
+
+/* GLOW */
+.glow{
+text-shadow:0 0 10px gold, 0 0 20px orange;
+}
+
+/* MENU */
+.menu{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.cardItem{
+background:white;
+color:black;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+transition: 0.3s;
+}
+
+.cardItem:hover{
+background:gold;
+color:black;
+transform: scale(1.1);
+}
+
+.cardItem:active{
+transform: scale(0.95);
+}
+
+/* AVATAR */
+.avatarBox{
+position:relative;
+font-size:80px;
+}
+
+#mouth{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+width:20px;
+height:10px;
+background:red;
+border-radius:50%;
+}
+
+/* MAKAN */
+.food{
+position:absolute;
+font-size:30px;
+animation: makan 1s forwards;
+}
+
+@keyframes makan{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100px); opacity:0;}
+}
+
+/* BEDUG */
+#bedug{
+font-size:60px;
+cursor:pointer;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.2);}
+}
+
+/* CANVAS */
+canvas{
+background:white;
+border-radius:10px;
+}
+
+/* RULES */
+.rules{
+font-size:14px;
+opacity:0.8;
+}
+
+#aksesoris{
+position:absolute;
+top:-10px;
+left:50%;
+transform:translateX(-50%);
+font-size:40px;
+}
+
+/* LAMPION CONTAINER */
+.lampion-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+}
+
+/* LAMPION */
+.lampion{
+position:absolute;
+width:100px;
+height:150px;
+background:url("assets/lampion.png") no-repeat center;
+background-size:contain;
+animation: turun 10s linear infinite;
+}
+
+.lampion:nth-child(1){ transform: scale(1.2); }
+.lampion:nth-child(2){ transform: scale(0.8); }
+.lampion:nth-child(3){ transform: scale(1.5); }
+
+.lampion{
+filter: drop-shadow(0 0 10px gold);
+}
+
+/* POSISI RANDOM */
+.lampion:nth-child(1){
+left:20%;
+animation-duration:9s;
+}
+.lampion:nth-child(2){
+left:50%;
+animation-duration:11s;
+}
+.lampion:nth-child(3){
+left:80%;
+animation-duration:13s;
+}
+
+/* ANIMASI TURUN */
+@keyframes turun{
+0%{
+top:-100px;
+transform:rotate(0deg);
+}
+100%{
+top:110%;
+transform:rotate(360deg);
+}
+}
+
+.cardItem.active{
+background:gold;
+transform:scale(1.1);
+}
+
+.cardItem{
+background: rgba(255,255,255,0.1);
+border-radius: 15px;
+padding: 15px;
+margin: 10px;
+width: 120px;
+display: inline-block;
+backdrop-filter: blur(10px);
+}
+
+.cardItem .icon{
+font-size: 30px;
+margin-bottom: 5px;
+}
+
+.cardItem .nama{
+font-weight: bold;
+}
+
+.cardItem .harga{
+font-size: 12px;
+opacity: 0.8;
+}
+
+.cardItem button{
+margin-top: 5px;
+padding: 5px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.kata{
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: muncul 0.5s forwards;
+}
+
+.nama{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@keyframes muncul{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#ucapan{
+    direction: rtl;
+    color: gold;
+}
+
+.nama{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center; /* ⬅️ ini bikin nama ke tengah */
+}
+
+.ketupat{
+position: absolute;
+font-size: 30px;
+cursor: pointer;
+}
+
+#gameBox{
+position: relative;
+width: 300px;
+height: 200px;
+margin: auto;
+border: 2px dashed gold;
+overflow: hidden;
+}
+
+.sajianArea{
+position:relative;
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+gap:20px;
+}
+
+/* TANGAN */
+.tangan{
+position:absolute;
+bottom:-150px;
+width:120px;
+height:120px;
+background:url("assets/tangan.png") no-repeat center;
+background-size:contain;
+animation:munculTangan 1s forwards;
+}
+
+@keyframes munculTangan{
+to{
+bottom:0;
+}
+}
+
+/* MAKANAN */
+.makanan, .minuman{
+font-size:40px;
+transition:0.5s;
+}
+
+/* EFEK DIGIGIT */
+@keyframes gigit{
+0%{
+opacity:1;
+transform:scale(1);
+}
+30%{
+transform:scale(0.9) rotate(-5deg);
+}
+60%{
+transform:scale(0.7) rotate(5deg);
+}
+100%{
+opacity:0;
+transform:scale(0);
+}
+}
+
+@keyframes naikMulut{
+0%{ transform: translateY(0); }
+100%{ transform: translateY(-80px); opacity:0; }
+}
+
+.dimakan{
+animation: naikMulut 0.8s forwards;
+}
+
+.tangan{
+font-size:80px;
+content:"✋";
+>>>>>>> 437bb3c4fcd74598e302bb1763a8f5bbf3b17ba1
 }
